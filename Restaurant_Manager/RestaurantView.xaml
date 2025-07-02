@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurant_Manager.RestaurantView"
+             Title="Overview of the restaurant"
+             BackgroundColor="#F5F5F5">
+    <Grid RowDefinitions="65, *"
+          ColumnDefinitions=".80*, .20*"
+          ColumnSpacing="20"
+          Padding="10"
+          RowSpacing="10">
+
+
+        <Button Text="Log out" Grid.Column="1" Grid.Row="0" Background="#8D6748" Clicked="LogUserOut"/>
+
+        <AbsoluteLayout x:Name="ContainerOfTables" Grid.Row="1" Grid.Column="0">
+            <AbsoluteLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="dodadiMasa"/>
+                </AbsoluteLayout.GestureRecognizers>
+        </AbsoluteLayout>
+
+        <Grid x:Name="DodatniOpcii" Grid.Column="1" Grid.Row="1" RowDefinitions="Auto, Auto" RowSpacing="10" BackgroundColor="LightGray" Padding="5">
+            <Button Text="Register a new server" Grid.Row="0" Background="#8D6748"  Clicked="LogUserOut"/>
+        </Grid>
+
+
+
+
+    </Grid>
+
+</ContentPage>

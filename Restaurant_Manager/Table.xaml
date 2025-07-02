@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurant_Manager.Table"
+             Title="Table"
+             BackgroundColor="#F5F5F5">
+    
+    <Grid RowDefinitions="50, 100, Auto, Auto, *"
+      Padding="10"
+      ColumnSpacing="10"
+      RowSpacing="10"
+      ColumnDefinitions=".75*, .25*">
+
+        <Button Text="Log out" Grid.Column="1" Grid.Row="0" Background="#8D6748" Clicked="LogUserOut"/>
+
+        <Image Source="restlogo.png" Grid.Row="1" Grid.ColumnSpan="2"></Image>
+        <Entry Placeholder="Add a new drink" Grid.Row="2" Grid.Column="0" x:Name="DrinkToAdd" ></Entry>
+        <Button Text="Add drink" Grid.Row="2" Grid.Column="1" x:Name="btnDrinkToAdd" Clicked="AddDrink"></Button>
+
+        <Picker x:Name="ListaDrop" Grid.Row="3" Grid.ColumnSpan="2" Title="Select Drink">
+
+        </Picker>
+
+    </Grid>
+    
+</ContentPage>

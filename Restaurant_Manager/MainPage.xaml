@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurant_Manager.MainPage"
+             BackgroundColor="#F5F5F5"
+             Title="Log into your account">
+
+    <Grid RowDefinitions="100, Auto, Auto, Auto, Auto, Auto"
+      ColumnDefinitions=".30*, .40*, .30*"
+      Padding="30"
+      ColumnSpacing="10"
+      RowSpacing="10">
+
+        <Image Source="restlogo.png" Grid.Column="1" Grid.Row="0"/>
+        <Label Grid.Column="1" Grid.Row="1">Enter your username</Label>
+        <Entry Placeholder="Username" Grid.Column="1" Grid.Row="2" x:Name="UsernameField"></Entry>
+        <Label Grid.Column="1" Grid.Row="3">Enter your password</Label>
+        <Entry Placeholder="Password" Grid.Column="1" Grid.Row="4" x:Name="PasswordField" IsPassword="True"></Entry>
+        <Label Text="" FontSize="20" FontAttributes="Bold" x:Name="ErrorField" Grid.Row="4" Grid.Column="2"/>
+        <Button Text="Log in" Grid.Column="1" Grid.Row="5" Background="#8D6748" Clicked="UserLogIn"></Button>
+
+    </Grid>
+
+</ContentPage>
